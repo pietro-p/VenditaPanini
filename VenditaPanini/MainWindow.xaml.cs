@@ -23,6 +23,7 @@ namespace VenditaPanini
         public MainWindow()
         {
             InitializeComponent();
+            txtPrezzo.IsEnabled = false;
         }
 
         private void btnCalcola_Click(object sender, RoutedEventArgs e)
@@ -62,7 +63,7 @@ namespace VenditaPanini
             {
                 prezzo += 0.30;
             }
-            else if (ckbFormaggio.IsChecked == true)
+            if (ckbFormaggio.IsChecked == true)
             {
                 prezzo += 0.30;
             }
@@ -70,11 +71,11 @@ namespace VenditaPanini
             {
                 prezzo += 0.30;
             }
-            else if (ckbPeperoni.IsChecked == true)
+            if (ckbPeperoni.IsChecked == true)
             {
                 prezzo += 0.30;
             }
-          
+
             txtPrezzo.Text = prezzo.ToString();
 
         }
